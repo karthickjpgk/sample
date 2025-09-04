@@ -1,0 +1,16 @@
+git init #initialize the repository 
+git config --name "karthickjpgk" #sets the username 
+git config --email "karthickjpgk@gmail.com" @#sets the email id 
+git add a.html # add file to repository 
+git commit -m "a.html file is uploaded"  
+git remote add demo "remote path of the repository" #adds the local repository to the remote repository
+git push demo master #uploades the local repository to the remote repository
+git pull demo master #removes the file in remove repository 
+git branch #lists all the branches
+git branch branch_v1 
+git checkout branch_v1
+git add c.html 
+git commit -m 
+git push repo branch_v1
+git checkout master 
+git merge branch_v1

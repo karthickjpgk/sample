@@ -1,0 +1,38 @@
+ install chef development kit 
+creating chefbook
+creating ruby file 
+installing apache 
+default webpage in apache
+ubuntu@ip-172-31-43-130:~$ VER=4.13.3
+wget https://packages.chef.io/files/stable/chefdk/${VER}/ubuntu/20.04/chefdk_${VER}-1_amd64.deb
+
+ sudo apt install ./chefdk_${VER}-1_amd64.deb
+
+ wget https://packages.chef.io/files/stable/chefdk/${VER}/ubuntu/20.04/chefdk_${VER}-1_amd64.deb
+
+to check version 
+ chef --version
+
+create one file by mkdir chef-repo/
+ sudo chef generate cookbook sample
+cd sample/recipes
+create file using vim 
+sudo vim hello.db
+	file '/tmp/hellochef.txt' do
+ 	 content 'Hello Ruby!'
+ 	 action :create
+	end
+apt-get update 
+apt-get update --fix-missing
+sudo vim apache2.rb
+package 'apache2' do
+  action :install
+end
+service 'apache2' do
+  action [:enable, :start]
+end
+file '/var/www/html/index.html' do
+  content '<h1>hello this is installed right now </h1>'
+  action :create
+end
+
